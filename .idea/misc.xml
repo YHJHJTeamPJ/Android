@@ -3,14 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/82104/AndroidStudioProjects/board/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1105" />
-        <entry key="..\:/Users/82104/AndroidStudioProjects/board/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1105" />
-        <entry key="..\:/Users/82104/AndroidStudioProjects/board/app/src/main/res/drawable/item_border.xml" value="0.1" />
-        <entry key="..\:/Users/82104/AndroidStudioProjects/board/app/src/main/res/layout/activity_item_detail.xml" value="0.1895734597156398" />
-        <entry key="..\:/Users/82104/AndroidStudioProjects/board/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/82104/AndroidStudioProjects/board/app/src/main/res/layout/item_entity.xml" value="0.21197916666666666" />
-        <entry key="..\:/Users/82104/AndroidStudioProjects/board/app/src/main/res/layout/item_recycler.xml" value="0.264" />
-        <entry key="..\:/Users/82104/AndroidStudioProjects/board/app/src/main/res/layout/main_rv_item.xml" value="0.2033514492753623" />
+        <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/layout/activity_item_detail.xml" value="0.1125" />
+        <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/layout/activity_main.xml" value="0.1125" />
+        <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/layout/item_entity.xml" value="0.264" />
       </map>
     </option>
   </component>

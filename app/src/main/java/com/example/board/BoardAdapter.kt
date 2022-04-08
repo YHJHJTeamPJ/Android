@@ -45,16 +45,16 @@ class BoardAdapter(private val context: Context) : RecyclerView.Adapter<Recycler
             this.pos = pos
             this.itemEntity = itemEntity
             binding.title.text = itemEntity.title
-            binding.subTitle.text = itemEntity.subTitle
-            binding.date.text = itemEntity.date
+            binding.content.text = itemEntity.content
+            binding.nickname.text = itemEntity.nickname
             binding.executePendingBindings()
         }
 
         fun init(){
             binding.viewGroup.setOnClickListener(this)
             binding.title.isClickable = false
-            binding.subTitle.isClickable = false
-            binding.date.isClickable = false
+            binding.content.isClickable = false
+            binding.nickname.isClickable = false
         }
 
         override fun onClick(v: View) {

@@ -17,7 +17,7 @@ class ItemDetailActivity : AppCompatActivity() {
     fun init(){
         item = intent.extras!!.get("item") as ItemEntity
         binding.title.text = item.title
-        binding.contents.text = item.contents
-        binding.date.text = item.date
+        binding.content.text = item.content
+        binding.nickname.text = item.nickname
     }
 }
