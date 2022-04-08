@@ -13,9 +13,9 @@ import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
 
-    var binding: ActivityMainBinding? = null
-    lateinit var items: MutableList<ItemEntity>
-    lateinit var adapter: BoardAdapter
+//    var binding: ActivityMainBinding? = null
+//    lateinit var items: MutableList<ItemEntity>
+//    lateinit var adapter: BoardAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
