@@ -1,10 +1,14 @@
 package com.example.board
 
-import java.io.Serializable
+import com.squareup.moshi.Json
 
-class ItemEntity:Serializable{
-    var number: Long? = null
-    var title: String? = null
-    var nickname: String? = null
-    var content: String? = null
-}
+data class ItemEntity(
+    @field:Json(name = "number")
+    var number: Long?,
+    @field:Json(name = "title")
+    var title: String?,
+    @field:Json(name = "nickname")
+    var nickname: String?,
+    @field:Json(name = "content")
+    var content: String?
+)

@@ -15,9 +15,9 @@ class ItemDetailActivity : AppCompatActivity() {
     }
 
     fun init(){
-        item = intent.extras!!.get("item") as ItemEntity
-        binding.title.text = item.title
-        binding.content.text = item.content
-        binding.nickname.text = item.nickname
+        item = intent.extras?.get("item") as ItemEntity
+        binding.title.setText(item.title)
+        binding.content.setText(item.content)
+        binding.nickname.setText(item.nickname)
     }
 }
