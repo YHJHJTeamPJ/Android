@@ -11,14 +11,14 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(){
     private val binding: ActivityMainBinding by lazy {
         ActivityMainBinding.inflate(layoutInflater)
     }
     private val emgMedAdapter by lazy {
-        BoardAdapter()
+        BoardAdapter(context = this)
     }
-
+    lateinit var items : MutableList<ItemEntity>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -28,9 +28,12 @@ class MainActivity : AppCompatActivity() {
             adapter = emgMedAdapter
             addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
         }
+
         binding.btnGet.setOnClickListener {
             retrofitWork()
         }
+        binding.reycleView.layoutManager = LinearLayoutManager(this)
+        binding.reycleView.adapter = emgMedAdapter
     }
 
     private fun retrofitWork() {
@@ -44,7 +47,7 @@ class MainActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
 //                        Log.d("TAG", response.body().toString())
                     val result = response.body()
-                    emgMedAdapter.submitList(result!!)
+                    emgMedAdapter.submitList(result)
                 }
             }
 

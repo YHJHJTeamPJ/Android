@@ -1,6 +1,7 @@
 package com.example.board
 
 import com.squareup.moshi.Json
+import java.io.Serializable
 
 data class ItemEntity(
     @field:Json(name = "number")
@@ -11,4 +12,4 @@ data class ItemEntity(
     var nickname: String?,
     @field:Json(name = "content")
     var content: String?
-)
+):Serializable{}
