@@ -2,6 +2,7 @@ package com.example.board
 
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -53,6 +54,8 @@ class BoardAdapter(private val context: Context) : ListAdapter<ItemEntity, Board
         override fun onClick(v: View) {
             when(v.id){
                 R.id.viewGroup -> {
+                    Log.d("아이템클릭","아이템 클릭: ${itemEntity?.title}")
+                    Log.d("아이템클릭","아이템 클릭: ${itemEntity?.content}")
                     val intent = Intent(context, ItemDetailActivity::class.java)
                     intent.putExtra("item", itemEntity)
                     context?.startActivity(intent)

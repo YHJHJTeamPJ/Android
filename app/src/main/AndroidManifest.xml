@@ -20,7 +20,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.board.ItemDetailActivity"></activity>
+        <activity
+            android:name="com.example.board.BoardActivity">
+        </activity>
+        <activity
+            android:name="com.example.board.ItemDetailActivity">
+        </activity>
     </application>
 
 </manifest>

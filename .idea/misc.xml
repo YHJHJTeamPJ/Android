@@ -3,10 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/layout/activity_item_detail.xml" value="0.1125" />
-        <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.105" />
+        <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/drawable/blue_button.xml" value="0.105" />
+        <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/drawable/facebook_button.xml" value="0.105" />
+        <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/drawable/ic_facebook.xml" value="0.105" />
+        <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/drawable/ic_launcher_background.xml" value="0.105" />
+        <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/drawable/rounded_border.xml" value="0.105" />
+        <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/layout/activity_board.xml" value="0.264" />
+        <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/layout/activity_item_detail.xml" value="0.2" />
+        <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/layout/activity_mainactivity.xml" value="0.25" />
+        <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/layout/activity_sociallogin.xml" value="0.1" />
         <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/layout/item_entity.xml" value="0.16" />
         <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/xml/network_securty_config.xml" value="0.11197916666666667" />
+        <entry key="..\:/Users/82104/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/activity_list_item.xml" value="0.1" />
       </map>
     </option>
   </component>
