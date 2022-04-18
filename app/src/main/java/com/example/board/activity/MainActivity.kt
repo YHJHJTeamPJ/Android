@@ -1,10 +1,15 @@
-package com.example.board
+package com.example.board.activity
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.example.board.R
+import com.example.board.databinding.ActivityMainBinding
+import com.example.test.LoginPostModel
+import com.example.test.LoginPostResult
+import com.example.test.service.LoginService
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -14,6 +19,10 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_register.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class MainActivity : AppCompatActivity(),View.OnClickListener {
 
@@ -22,8 +31,13 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     //google client
     private lateinit var googleSignInClient: GoogleSignInClient
 
+    //login service
+    val binding by lazy { ActivityMainBinding.inflate(layoutInflater)}
+    val api = LoginService.create()
+
     //private const val TAG = "GoogleActivity"
     private val RC_SIGN_IN = 99
+    //private const val TAG = "RegisterActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,11 +46,17 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         //btn_googleSignIn.setOnClickListener (this) // 구글 로그인 버튼
         btn_googleSignIn.setOnClickListener {signIn()}
 
+        //Login Button 클릭 시 이벤트
+        btn_Log_In.setOnClickListener { logIn() }
+        //Signin Button 클릭시 이벤트
+        btn_Sign_In.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
         //Google 로그인 옵션 구성. requestIdToken 및 Email 요청
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
-            //'R.string.default_web_client_id' 에는 본인의 클라이언트 아이디를 넣어주시면 됩니다.
-            //저는 스트링을 따로 빼서 저렇게 사용했지만 스트링을 통째로 넣으셔도 됩니다.
             .requestEmail()
             .build()
 
@@ -87,7 +107,6 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                     toMainActivity(firebaseAuth?.currentUser)
                 } else {
                     Log.w("LoginActivity", "firebaseAuthWithGoogle 실패", task.exception)
-//                    Snackbar.make(login_layout, "로그인에 실패하였습니다.", Snackbar.LENGTH_SHORT).show()
                 }
             }
     }// firebaseAuthWithGoogle END
@@ -106,8 +125,35 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         val signInIntent = googleSignInClient.signInIntent
         startActivityForResult(signInIntent, RC_SIGN_IN)
     }
-    // signIn End
+    // email logIn
+    private fun logIn(){
 
+        val intent = Intent(this, BoardActivity::class.java)
+
+
+
+        val data = LoginPostModel(editText.text.toString(),editText2.text.toString())
+        api.post_users(data).enqueue(object : Callback<LoginPostResult> {
+            override fun onResponse(call: Call<LoginPostResult>, response: Response<LoginPostResult>) {
+                Log.d("log 성공",response.toString())
+                Log.d("log 성공", response.body().toString())
+
+                if(response.isSuccessful) {
+                    startActivity(intent)
+                    finish()
+                }
+            }
+            override fun onFailure(call: Call<LoginPostResult>, t: Throwable) {
+                // 실패
+                Log.d("log 실패",t.message.toString())
+                Log.d("log 실패","fail")
+            }
+
+        })
+    }
+
+
+    // signIn End
     override fun onClick(p0: View?) {
     }
 

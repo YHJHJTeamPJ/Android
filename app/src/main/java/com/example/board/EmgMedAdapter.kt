@@ -9,7 +9,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.board.activity.ItemDetailActivity
 import com.example.board.databinding.ItemEntityBinding
+import com.example.board.entity.ItemEntity
 
 
 class BoardAdapter(private val context: Context) : ListAdapter<ItemEntity, BoardAdapter.EmgMedViewHolder>(EmgmedCallback) {
@@ -54,8 +56,6 @@ class BoardAdapter(private val context: Context) : ListAdapter<ItemEntity, Board
         override fun onClick(v: View) {
             when(v.id){
                 R.id.viewGroup -> {
-                    Log.d("아이템클릭","아이템 클릭: ${itemEntity?.title}")
-                    Log.d("아이템클릭","아이템 클릭: ${itemEntity?.content}")
                     val intent = Intent(context, ItemDetailActivity::class.java)
                     intent.putExtra("item", itemEntity)
                     context?.startActivity(intent)

@@ -1,4 +1,4 @@
-package com.example.board
+package com.example.board.entity
 
 import com.squareup.moshi.Json
 import java.io.Serializable
