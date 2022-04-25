@@ -9,7 +9,7 @@ object RetrofitBuilder {
 
     init {
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://192.168.0.3:80/")
+            .baseUrl("http://192.168.1.74:80/")
             .addConverterFactory(MoshiConverterFactory.create())
             .build()
 

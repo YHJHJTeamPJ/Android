@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Board"
         android:networkSecurityConfig="@xml/network_securty_config"
+        android:largeHeap="true"
         >
         <activity
             android:name=".activity.MainActivity"
@@ -29,6 +30,12 @@
         </activity>
         <activity
             android:name=".activity.ItemDetailActivity">
+        </activity>
+        <activity
+            android:name=".activity.SecondActivity">
+        </activity>
+        <activity
+            android:name=".activity.ChatActivity">
         </activity>
     </application>
 

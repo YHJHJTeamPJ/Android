@@ -1,7 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-android-extensions'
+    id 'kotlin-parcelize'
+   // id 'kotlin-android-extensions'
 }
 apply plugin: 'com.google.gms.google-services'
 
@@ -10,6 +11,7 @@ android {
     buildFeatures.viewBinding true
 
     defaultConfig {
+        multiDexEnabled true
         applicationId "com.example.board"
         minSdk 19
         targetSdk 31
@@ -68,4 +70,7 @@ dependencies {
 
     // Also declare the dependency for the Google Play services library and specify its version
     implementation 'com.google.android.gms:play-services-auth:20.1.0'
+
+
+
 }

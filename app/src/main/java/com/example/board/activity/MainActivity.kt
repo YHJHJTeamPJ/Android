@@ -18,8 +18,7 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_register.*
+
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -41,22 +40,22 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
         //btn_googleSignIn.setOnClickListener (this) // 구글 로그인 버튼
-        btn_googleSignIn.setOnClickListener {signIn()}
+        binding.btnGoogleSignIn.setOnClickListener {signIn()}
 
         //Login Button 클릭 시 이벤트
-        btn_Log_In.setOnClickListener { logIn() }
+        binding.btnLogIn.setOnClickListener { logIn() }
         //Signin Button 클릭시 이벤트
-        btn_Sign_In.setOnClickListener {
+        binding.btnSignIn.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
             finish()
         }
         //Google 로그인 옵션 구성. requestIdToken 및 Email 요청
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestIdToken("973602005484-ra62j847oabhtd64hftvula5384pq89h.apps.googleusercontent.com")
             .requestEmail()
             .build()
 
@@ -115,7 +114,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     // toMainActivity
     fun toMainActivity(user: FirebaseUser?) {
         if(user !=null) { // MainActivity 로 이동
-            startActivity(Intent(this, BoardActivity::class.java))
+            startActivity(Intent(this, SecondActivity::class.java))
             finish()
         }
     } // toMainActivity End
@@ -128,11 +127,11 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     // email logIn
     private fun logIn(){
 
-        val intent = Intent(this, BoardActivity::class.java)
+        val intent = Intent(this, SecondActivity::class.java)
 
 
 
-        val data = LoginPostModel(editText.text.toString(),editText2.text.toString())
+        val data = LoginPostModel( binding.editText.text.toString(), binding.editText2.text.toString())
         api.post_users(data).enqueue(object : Callback<LoginPostResult> {
             override fun onResponse(call: Call<LoginPostResult>, response: Response<LoginPostResult>) {
                 Log.d("log 성공",response.toString())
