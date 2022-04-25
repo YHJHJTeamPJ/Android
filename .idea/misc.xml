@@ -11,19 +11,16 @@
         <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/drawable/ic_launcher_background.xml" value="0.105" />
         <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/drawable/rounded_border.xml" value="0.105" />
         <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/layout/activity_board.xml" value="0.264" />
+        <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/layout/activity_boardreg.xml" value="0.4" />
         <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/layout/activity_item_detail.xml" value="0.2" />
         <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/layout/activity_mainactivity.xml" value="0.25" />
         <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/layout/activity_register.xml" value="0.22871376811594202" />
+        <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/layout/activity_second.xml" value="0.16822916666666668" />
         <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/layout/activity_sociallogin.xml" value="0.1" />
         <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/layout/item_entity.xml" value="0.16" />
         <entry key="..\:/Users/82104/AndroidStudioProjects/new/app/src/main/res/xml/network_securty_config.xml" value="0.11197916666666667" />
         <entry key="..\:/Users/82104/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/activity_list_item.xml" value="0.1" />
-        <entry key="..\:/Users/hijns/AndroidStudioProjects/Android_last/app/src/main/res/layout/activity_chat.xml" value="0.1" />
-        <entry key="..\:/Users/hijns/AndroidStudioProjects/Android_last/app/src/main/res/layout/activity_item_detail.xml" value="0.1" />
-        <entry key="..\:/Users/hijns/AndroidStudioProjects/Android_last/app/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
-        <entry key="..\:/Users/hijns/AndroidStudioProjects/Android_last/app/src/main/res/layout/activity_register.xml" value="0.1" />
-        <entry key="..\:/Users/hijns/AndroidStudioProjects/Android_last/app/src/main/res/layout/activity_second.xml" value="0.264" />
       </map>
     </option>
   </component>

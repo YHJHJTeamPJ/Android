@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import com.example.board.R
 import com.example.board.databinding.ActivityRegisterBinding
+
 import com.example.test.RegisterPostModel
 import com.example.test.RegisterPostResult
 import com.example.test.service.RegisterService

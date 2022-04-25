@@ -2,13 +2,12 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-parcelize'
-   // id 'kotlin-android-extensions'
 }
 apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdk 31
-    buildFeatures.viewBinding true
+
 
     defaultConfig {
         multiDexEnabled true
@@ -33,6 +32,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    viewBinding{
+        enabled = true
     }
     dataBinding{
         enabled = true
@@ -71,6 +73,6 @@ dependencies {
     // Also declare the dependency for the Google Play services library and specify its version
     implementation 'com.google.android.gms:play-services-auth:20.1.0'
 
-
-
+    implementation("androidx.multidex:multidex:2.0.1")
+    implementation("com.android.support:multidex:1.0.3")
 }

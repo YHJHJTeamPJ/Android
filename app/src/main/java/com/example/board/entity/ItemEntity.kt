@@ -13,3 +13,12 @@ data class ItemEntity(
     @field:Json(name = "content")
     var content: String?
 ):Serializable{}
+
+data class RegisterPostModel(
+    var title : String? =null ,
+    var content : String?=null,
+    var nickname : String? =null
+)
+data class RegisterPostResult(
+    var number: Long?
+)

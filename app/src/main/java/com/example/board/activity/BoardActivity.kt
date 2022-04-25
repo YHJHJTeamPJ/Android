@@ -1,5 +1,6 @@
 package com.example.board.activity;
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +10,7 @@ import com.example.board.BoardAdapter
 import com.example.board.entity.ItemEntity
 import com.example.board.RetrofitBuilder
 import com.example.board.databinding.ActivityBoardBinding
+import com.example.board.databinding.ActivityBoardregBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -30,12 +32,15 @@ class BoardActivity : AppCompatActivity(){
             adapter = emgMedAdapter
             addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
         }
-
-
             retrofitWork()
-
         binding.reycleView.layoutManager = LinearLayoutManager(this)
         binding.reycleView.adapter = emgMedAdapter
+
+        binding.btnReg.setOnClickListener {
+            val intent = Intent(this, BoardRegActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     private fun retrofitWork() {

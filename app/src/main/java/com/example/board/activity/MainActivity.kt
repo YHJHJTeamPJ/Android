@@ -18,7 +18,6 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
-
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -55,7 +54,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         }
         //Google 로그인 옵션 구성. requestIdToken 및 Email 요청
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken("973602005484-ra62j847oabhtd64hftvula5384pq89h.apps.googleusercontent.com")
+            .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
 
@@ -131,7 +130,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
 
 
 
-        val data = LoginPostModel( binding.editText.text.toString(), binding.editText2.text.toString())
+        val data = LoginPostModel(binding.editText.text.toString(),binding.editText2.text.toString())
         api.post_users(data).enqueue(object : Callback<LoginPostResult> {
             override fun onResponse(call: Call<LoginPostResult>, response: Response<LoginPostResult>) {
                 Log.d("log 성공",response.toString())
